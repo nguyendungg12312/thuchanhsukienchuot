@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+;<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload=" docready()">
+
+    <img style="width: 10% ; left: 500px; top: 100px; position: absolute" id="meo" src="https://sohanews.sohacdn.com/160588918557773824/2020/8/2/photo-1-1596375131356309157864.jpg"/>
+
+    <script>
+         let element ;
+
+function upArrowpressed() {
+     element = document.getElementById("meo");
+    element.style.top = parseInt(element.style.top) - 5 + "px";}
+function donwArrowpressed(){
+     element = document.getElementById("meo");
+    element.style.top = parseInt(element.style.top)
+    +5 + "px";}
+function leftArrowpressed(){
+     element = document.getElementById("meo");
+    element.style.left = parseInt(element.style.left) -5 + "px";}
+function rightArrowpressed(){
+     element = document.getElementById("meo");
+    element.style.left = parseInt(element.style.left) +5 + "px";}
+function moveselection(evt){
+    switch (evt.keyCode) {
+        case 37:
+            leftArrowpressed();
+            break;
+        case 39:
+            rightArrowpressed();
+            break;
+        case 38:
+            upArrowpressed();
+            break;
+        case 40:
+            donwArrowpressed();
+break;
+    }
+    }
+    function docready(){
+        window.addEventListener("keydown", moveselection)
+    }
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
